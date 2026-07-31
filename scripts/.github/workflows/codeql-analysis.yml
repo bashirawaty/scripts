@@ -1,0 +1,24 @@
+# Alternate CodeQL workflow (kept for compatibility)
+name: "CodeQL Scan"
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v2
+        with:
+          languages: 'javascript,python'
+      - uses: github/codeql-action/autobuild@v2
+      - uses: github/codeql-action/analyze@v2
