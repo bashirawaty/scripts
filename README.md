@@ -4,20 +4,23 @@ A growing collection of small automation and administration scripts.
 
 ## Repository structure
 
+Script categories live directly at the repository root:
+
 ```text
-scripts/
-└── bash/
-    └── hello.sh
+bash/
+└── hello.sh
 ```
 
-Add new scripts under `scripts/<language-or-platform>/`, for example:
+As the collection grows, add top-level folders by language or platform:
 
-- `scripts/bash/`
-- `scripts/python/`
-- `scripts/aws/`
-- `scripts/linux/`
+- `bash/`
+- `python/`
+- `aws/`
+- `linux/`
+- `terraform/`
+- `kubernetes/`
 
-Keep tests in `tests/` and supporting documentation in `docs/` as the repository grows.
+Keep tests in `tests/` and supporting documentation in `docs/`.
 
 ## Usage
 
@@ -26,7 +29,7 @@ Clone the repository, inspect a script before running it, and invoke it with its
 ```bash
 git clone https://github.com/bashirawaty/scripts.git
 cd scripts
-bash scripts/bash/hello.sh
+bash bash/hello.sh
 ```
 
 ## Quality and security
